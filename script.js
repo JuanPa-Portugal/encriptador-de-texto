@@ -2,11 +2,14 @@
 //encriptando texto
 var btnEncriptar = document.querySelector("#btn-encriptar"); //boton para encriptar
 
+
 //capturando texto para encriptar con el botton encriptar
 btnEncriptar.addEventListener("click", function (event) {
-  event.preventDefault();
-  var texto = document.querySelector("#input-texto").value; //
-  var msgEncriptado = document.querySelector("#msg");
+    event.preventDefault();
+    var texto = document.querySelector("#input-texto").value; //
+    var msgEncriptado = document.querySelector("#msg");
+    var btnCopiar = document.querySelector("#btn-copy");
+    btnCopiar.classList.remove("btn-copiar");
   //llamando a la funcion encriptacion para encriptar texto
   var codificado = encriptacion(texto);
   msgEncriptado.value = codificado;// deveulve texto encriptado en la caja de resultado
