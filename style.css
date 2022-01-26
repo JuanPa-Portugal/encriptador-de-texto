@@ -13,7 +13,8 @@ body {
 
 .main {
   width: 80vw;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: center;
 }
@@ -29,14 +30,13 @@ body {
 .box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 10px;
-  margin: 0 10px 0 10px;
+  margin: 0 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 0.5em;
-  width: 80vw;
+  width: 30vw;
   height: auto;
 }
 
@@ -74,28 +74,32 @@ body {
   justify-content: center;
   bottom: 0;
   width: 100%;
-  background-color: rgba(16, 72, 175, 0.733);
 }
 @media(max-width:520px){
   .main {
   display: block;
   }
-}
-form{
-  font-size: 16px;
-  font-weight: lighter;
-  text-align: center;
-}
-.titulo{
-  margin-top: 50px;
-  font-size: 35px;
-}
-h2{
-  font-size: 17px;
-  text-align: center;
-}
-.box{
-  margin-top:60px;
-  margin-left: 0;
-  margin-right: 0;
+  form{
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: center;
+  }
+  .titulo{
+    margin-top: 50px;
+    font-size: 35px;
+  }
+  h2{
+    font-size: 17px;
+    text-align: center;
+  }
+  .box{
+    width: 70vw;
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer{
+    font-size: 11px;
+    text-align: center;
+  }
 }
