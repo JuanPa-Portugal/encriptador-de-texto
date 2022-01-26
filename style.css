@@ -36,7 +36,7 @@ body {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 0.5em;
-  width: 30vw;
+  width: 80vw;
   height: auto;
 }
 
@@ -49,6 +49,10 @@ body {
   padding: 10px;
   margin-top: 10px;
   border-radius: 0.5em;
+}
+.btn:hover{
+  background-color: rgba(2, 49, 255, 0.924);
+  color: aqua;
 }
 
 .text-input {
@@ -82,10 +86,16 @@ form{
   font-weight: lighter;
   text-align: center;
 }
+.titulo{
+  margin-top: 50px;
+  font-size: 35px;
+}
 h2{
   font-size: 17px;
   text-align: center;
 }
 .box{
-  margin-bottom: 30px;
+  margin-top:60px;
+  margin-left: 0;
+  margin-right: 0;
 }
