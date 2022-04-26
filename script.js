@@ -1,12 +1,13 @@
 
-//encriptando texto
+/* //encriptando texto
 var btnEncriptar = document.querySelector("#btn-encriptar"); //boton para encriptar
 
 
 //capturando texto para encriptar con el botton encriptar
 btnEncriptar.addEventListener("click", function (event) {
     event.preventDefault();
-    var texto = document.querySelector("#input-texto").value; //
+    var texto = document.querySelector("#input-texto").value; 
+    texto.addEventListener("keyup", soloLetras(e))
     var msgEncriptado = document.querySelector("#msg");
     var btnCopiar = document.querySelector("#btn-copy");
     btnCopiar.classList.remove("btn-copiar");
@@ -40,5 +41,5 @@ btnCopiar.addEventListener("click",function(){
     document.execCommand("copy");
 })
 
-
+ */
  
