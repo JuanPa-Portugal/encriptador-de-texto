@@ -5,12 +5,18 @@
 }
 
 body {
-  background-color: lightgray;
+  background-color: #F3F5FC;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: realtive;
    min-height: 100vh;
 }
+.container{
+  display: flex;
 
+}
+#encriptar-texto{
+background-color: #F3F5FC;
+}
 .main {
   width: 80vw;
   margin-left: auto;
@@ -20,24 +26,27 @@ body {
 }
 
 .titulo {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   padding: 15px;
-  width: 30vw;
-  margin: auto;
+  margin-bottom: 30px;
 }
-
+.form.box{
+  background-color:#F3F5FC ;
+  box-shadow: none;
+}
 .box {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  padding-top: 0;
   margin: 0 10px;
+  margin-bottom: 30px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  background-color: white;
   border-radius: 0.5em;
-  width: 30vw;
-  height: auto;
+  width: 40vw;
+  height: 70vh
 }
 
 .btn {
@@ -55,25 +64,62 @@ body {
   color: aqua;
 }
 
-.text-input {
+.text-input { 
   border-radius: 0.5em;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none; /* saca la linea del imput al hacer focus */
+  background-color: #F3F5FC;
   display: block;
   padding: 0.5em;
   width: 100%;
-  height: 50px;
+  height: 60vh;
+  text-align:top;
 }
 
 .btn-copiar{
   display: none;
   
 }
-.footer{
+.msje-encriptado{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.image{
+  background-color: white;
+  border-radius: 8px;
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  bottom: 0;
+  align-items: center;
   width: 100%;
+  height: 100%;
+}
+.image img{
+  max-width: 100%;
+}
+.switch{
+  z-index: -1;
+}
+.subtitle{
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 0;
+
+}
+.text{
+  font-size: 16px;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
 }
 @media(max-width:520px){
   .main {

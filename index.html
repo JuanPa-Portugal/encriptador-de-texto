@@ -11,20 +11,32 @@
   <h1 class="titulo">Encriptador de textos</h1>
 
   <main class="main">
-    <section class="form box">
-      <form id="encriptar-texto">
-        <label for="input-texto">Solo letras minúsculas, sin acento</label>
-        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
-        <input class="btn" type="submit" value="encriptar!" id="btn-encriptar">
-        <input class="btn" type="submit" value="desencriptar!" id="btn-desencriptar">
-      </form>
-    </section>
+    <div class="container">
+      <section class="form box">
+        <form id="encriptar-texto">
+          <label for="input-texto">Solo letras minúsculas, sin acento</label>
+          <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
+          <input class="btn" type="submit" value="encriptar!" id="btn-encriptar">
+          <input class="btn" type="submit" value="desencriptar!" id="btn-desencriptar">
+        </form>
+      </section>
+
+      <section class="msg box">
+        <div class="msje-encriptado">
+          <h2 id="title">Mensaje encriptado:</h2>
+          <input class="text-input" type="text" id="msg"></input>
+          <input class="btn btn-copiar" type="submit" value="copiar" id="btn-copy">
+        </div>
+        <div class="image">
+          <img src="img/Muñeco.svg" alt="">
+          <h4 class="subtitle">Ningun mensaje fue encontrado</h4>
+          <p class="text">ingresa el texto que deseas encriptar o desencriptar</p>
+
+        </div>
+      </section>
+
+    </div>
   
-    <section class="msg box">
-      <h2 id="title">Mensaje encriptado:</h2>
-      <input class="text-input" type="text" id="msg"></input>
-      <input class="btn btn-copiar" type="submit" value="copiar" id="btn-copy">
-    </section>
 
   </main>
     <footer class="footer">
