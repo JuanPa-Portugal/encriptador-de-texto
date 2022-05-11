@@ -8,36 +8,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="titulo">Encriptador de textos</h1>
-
-  <main class="main">
+  <header class="container-logo">
+      <img class="img" src="/img/Logo.png" alt="logotipo ALuraLatam">
+  </header>
+  <main>
     <div class="container">
       <section class="form box">
         <form id="encriptar-texto">
-          <label for="input-texto">Solo letras minúsculas, sin acento</label>
-          <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
-          <input class="btn" type="submit" value="encriptar!" id="btn-encriptar">
-          <input class="btn" type="submit" value="desencriptar!" id="btn-desencriptar">
+          <label for="input-texto"></label>
+          <textarea name="input-texto" id="input-texto" class="text-input" cols="100" rows="50" placeholder="ingrese el texto aqui"></textarea>
+          <div class="text-info"> 
+            <img src="/img/bi_exclamation-circle-fill.png" alt="">
+            <p>  
+              Solo letras minúsculas, sin acento
+            </p>
+          </div>
+          <div class="btn">
+            <input class="btn-encriptar" type="submit" value="encriptar!" id="btn-encriptar">
+            <input class="btn-desencriptar" type="submit" value="desencriptar!" id="btn-desencriptar">
+          </div>
         </form>
       </section>
 
       <section class="msg box">
-        <div class="msje-encriptado">
+        <div class="msje-encriptado " >
           <h2 id="title">Mensaje encriptado:</h2>
-          <input class="text-input" type="text" id="msg"></input>
-          <input class="btn btn-copiar" type="submit" value="copiar" id="btn-copy">
+          <textarea name="" id="msg" class="text-input" cols="50" rows="10"></textarea>
+          <input class=" btn-encriptar" type="submit" value="copiar" id="btn-copy">
         </div>
-        <div class="image">
+        <div class="image" id="switch-div">
           <img src="img/Muñeco.svg" alt="">
-          <h4 class="subtitle">Ningun mensaje fue encontrado</h4>
-          <p class="text">ingresa el texto que deseas encriptar o desencriptar</p>
-
+          <div>
+            <h4 class="subtitle">Ningun mensaje fue encontrado</h4>
+            <p class="text">ingresa el texto que deseas encriptar o desencriptar</p>
+          </div>
         </div>
       </section>
-
     </div>
-  
-
   </main>
     <footer class="footer">
       <p> Realizado por Juan Pablo Ayoroa Portugal |2022</p>

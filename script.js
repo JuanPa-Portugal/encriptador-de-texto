@@ -6,6 +6,8 @@ var btnEncriptar = document.querySelector("#btn-encriptar"); //boton para encrip
 //capturando texto para encriptar con el botton encriptar
 btnEncriptar.addEventListener("click", function (event) {
     event.preventDefault();
+    var divSwitch = document.querySelector("#switch-div")
+    divSwitch.classList.add("switch")
     var texto = document.querySelector("#input-texto"); 
     var text =texto.value
     var msgEncriptado = document.querySelector("#msg");
@@ -26,7 +28,7 @@ btnEncriptar.addEventListener("click", function (event) {
     btnDesencriptar.addEventListener("click",function(e){
         e.preventDefault();
         var title=document.querySelector("#title");
-        title.innerHTML="Mensaje desencriptado";// cambia el titulo al hacer click en desencritar 
+        title.innerHTML="Mensaje desencriptado";// cambia el titulo al hacer click en desencriptar 
         var textoParaDecodificar = document.querySelector("#input-texto").value;
         //llamando a la funcion encriptacion en su funcion desencriptar texto
         var decodificado= desencriptacion(textoParaDecodificar);

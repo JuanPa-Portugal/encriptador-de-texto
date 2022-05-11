@@ -5,33 +5,26 @@
 }
 
 body {
-  background-color: #F3F5FC;
+  background-color: #E5E5E5;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: realtive;
-   min-height: 100vh;
+  min-height: 100vh;
+}
+.container-logo{
+  width: 90%;
+  margin:0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .container{
   display: flex;
-
-}
-#encriptar-texto{
-background-color: #F3F5FC;
-}
-.main {
-  width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-}
-
-.titulo {
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 30px;
+  width: 90%;
+  margin: 0 auto;
+  justify-content:space-around;
+  align-items: center;
+  padding-top: 10px;
 }
 .form.box{
-  background-color:#F3F5FC ;
   box-shadow: none;
 }
 .box {
@@ -39,47 +32,67 @@ background-color: #F3F5FC;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
   padding-top: 0;
   margin: 0 10px;
   margin-bottom: 30px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5em;
+  border-radius: 16px;
   width: 40vw;
   height: 70vh
 }
-
+.text-info{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.text-info p{
+  margin-left:5px;
+  font-style: normal;
+  font-size: 12px;
+  font-weight:lighter;
+  color: #495057;
+  opacity: 0.8;
+}
 .btn {
-  width: 100px;
+  gap: 8px;
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  padding: 10px;
+}
+.btn-encriptar{
+  width: 50%;
   border: 0;
   color: white;
   font-weight: bold;
-  background-color: rgb(16, 53, 218);
+  background-color: rgba(10,56,113,1);
   padding: 10px;
-  margin-top: 10px;
-  border-radius: 0.5em;
+  border-radius: 1em;
 }
-.btn:hover{
+.btn-desencriptar{
+  width: 50%;
+  border: 1px solid rgba(10,56,113,1);
+  color: rgba(10,56,113,1);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 1em;
+}
+.btn-desencriptar:hover{
   background-color: rgba(2, 49, 255, 0.924);
   color: aqua;
 }
-
 .text-input { 
-  border-radius: 0.5em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   border: none;
   outline: none; /* saca la linea del imput al hacer focus */
-  background-color: #F3F5FC;
+  background-color: #E5E5E5;
   display: block;
   padding: 0.5em;
   width: 100%;
   height: 60vh;
   text-align:top;
 }
-
-.btn-copiar{
-  display: none;
-  
+.msg{
+  background-color: white;
 }
 .msje-encriptado{
   display: flex;
@@ -87,6 +100,11 @@ background-color: #F3F5FC;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 68vh;
+  border-radius: 16px;
+}
+.msje-encriptado .text-input{
+  background-color: #ffffff;
 }
 .image{
   background-color: white;
@@ -103,36 +121,36 @@ background-color: #F3F5FC;
   max-width: 100%;
 }
 .switch{
-  z-index: -1;
+  display: none;
 }
 .subtitle{
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
   text-align: center;
   padding: 10px 0;
-
+  color: rgba(52, 58, 64, 1);
 }
 .text{
   font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
   color: #495057;
+  text-align: center;
   margin-bottom: 10px;
+  padding: 5px;
 }
-
 .footer{
-  display: flex;
-  justify-content: center;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
 }
-@media(max-width:520px){
-  .main {
-  display: block;
-  }
-  form{
-    font-size: 16px;
-    font-weight: lighter;
-    text-align: center;
-  }
-  .titulo{
-    margin-top: 50px;
-    font-size: 35px;
+@media(max-width:768px){
+  .container{
+    max-width: 90%;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
   }
   h2{
     font-size: 17px;
@@ -144,8 +162,40 @@ background-color: #F3F5FC;
     margin-left: auto;
     margin-right: auto;
   }
+  .image{
+    justify-content: start;
+    max-height: 100%;
+  }
+  .image img{
+    display: none;
+  }
+  .msje-encriptado {
+    max-height: 100%;
+  }
   .footer{
     font-size: 11px;
     text-align: center;
   }
+}
+@media(max-width:450px){
+  .form.box{
+    margin-bottom: 50px;
+  }
+  .btn{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .subtitle{
+    font-size: 20px;
+  }
+  .text{
+    font-size: 15px;
+  }
+  .footer{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
 }
