@@ -1,17 +1,21 @@
 
-//encriptando texto
+ //encriptando texto
 var btnEncriptar = document.querySelector("#btn-encriptar"); //boton para encriptar
 
 
 //capturando texto para encriptar con el botton encriptar
 btnEncriptar.addEventListener("click", function (event) {
     event.preventDefault();
-    var texto = document.querySelector("#input-texto").value; //
+    var divSwitch = document.querySelector("#switch-div")
+    divSwitch.classList.add("switch")
+    var texto = document.querySelector("#input-texto"); 
+    var text =texto.value
     var msgEncriptado = document.querySelector("#msg");
     var btnCopiar = document.querySelector("#btn-copy");
     btnCopiar.classList.remove("btn-copiar");
   //llamando a la funcion encriptacion para encriptar texto
-  var codificado = encriptacion(texto);
+  var codificado = encriptacion(text);
+  texto.value =""
   msgEncriptado.value = codificado;// deveulve texto encriptado en la caja de resultado
 });
 
@@ -23,9 +27,8 @@ btnEncriptar.addEventListener("click", function (event) {
  //capturando texto para desencriptar con el botton desencriptar
     btnDesencriptar.addEventListener("click",function(e){
         e.preventDefault();
-
         var title=document.querySelector("#title");
-        title.innerHTML="Mensaje desencriptado";// cambia el titulo al hacer click en desencritar 
+        title.innerHTML="Mensaje desencriptado";// cambia el titulo al hacer click en desencriptar 
         var textoParaDecodificar = document.querySelector("#input-texto").value;
         //llamando a la funcion encriptacion en su funcion desencriptar texto
         var decodificado= desencriptacion(textoParaDecodificar);
@@ -39,6 +42,5 @@ btnCopiar.addEventListener("click",function(){
     texto.select();
     document.execCommand("copy");
 })
-
 
  
